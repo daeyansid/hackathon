@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Resume Builder Form</h2>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required placeholder="Enter a unique username">
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" required>
+            </div>
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+    
+    <div class="resume-container">
+        <section id="dynamic-resume">
+        </section>
+        <div class="actions">
+            <button id="share-link">Get Shareable Link</button>
+            <button id="download-pdf">Download as PDF</button>
+            <p id="shareable-url" style="display: none;"></p>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
